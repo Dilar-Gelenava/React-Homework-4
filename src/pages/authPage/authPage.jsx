@@ -2,7 +2,7 @@ import Login from '../../components/auth/login';
 import Register from '../../components/auth/register';
 import { useState } from 'react';
 
-function Auth() {
+function AuthPage() {
   const [authPage, setAuthPage] = useState('login');
 
   return (
@@ -33,4 +33,4 @@ function Auth() {
     </div>
   );
 }
-export default Auth;
+export default AuthPage;

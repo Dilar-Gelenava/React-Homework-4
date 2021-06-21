@@ -1,8 +1,9 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ErrorBoundary from './components/error-boundary';
 import MainPage from './pages/mainPage';
-import Navbar from './components/navbar/navbar';
-import Auth from './pages/auth/auth';
+import Navbar from './components/navbar';
+import AuthPage from './pages/authPage';
+import Users from './pages/usersPage';
 
 function App() {
   return (
@@ -11,7 +12,10 @@ function App() {
         <Navbar />
         <Switch>
           <Route path="/auth">
-            <Auth />
+            <AuthPage />
+          </Route>
+          <Route path="/users">
+            <Users />
           </Route>
           <Route path="/">
             <MainPage />

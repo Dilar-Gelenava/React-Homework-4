@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
-import { register } from '../../../services/';
+// import { register } from '../../../services/';
 
 function Register() {
   const {
