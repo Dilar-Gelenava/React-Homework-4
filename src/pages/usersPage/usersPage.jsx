@@ -1,7 +1,7 @@
 import { loggedIn } from '../../HOC/loggedIn';
 import { useState, useEffect } from 'react';
 
-function Users() {
+function UsersPage() {
   const [users, setUsers] = useState(null);
 
   const getUsers = () => {
@@ -49,4 +49,4 @@ function Users() {
   );
 }
 
-export default loggedIn(Users);
+export default loggedIn(UsersPage);

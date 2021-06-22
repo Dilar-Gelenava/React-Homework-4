@@ -3,7 +3,8 @@ import ErrorBoundary from './components/error-boundary';
 import MainPage from './pages/mainPage';
 import Navbar from './components/navbar';
 import AuthPage from './pages/authPage';
-import Users from './pages/usersPage';
+import UsersPage from './pages/usersPage';
+import ResourcesPage from './pages/resourcesPage';
 
 function App() {
   return (
@@ -15,7 +16,10 @@ function App() {
             <AuthPage />
           </Route>
           <Route path="/users">
-            <Users />
+            <UsersPage />
+          </Route>
+          <Route path="/resources">
+            <ResourcesPage />
           </Route>
           <Route path="/">
             <MainPage />
