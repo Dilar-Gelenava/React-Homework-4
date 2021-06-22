@@ -1,4 +1,4 @@
-import { loggedIn } from '../../hoc/loggedIn';
+import { loggedIn } from '../../HOC/loggedIn';
 import { useState, useEffect } from 'react';
 
 function Users() {
@@ -37,12 +37,12 @@ function Users() {
         users.map((user) => (
           <div
             className="bg-dark rounded p-3 m-1"
-            style={{ width: '300px' }}
+            style={{ width: '250px' }}
             key={user.id}>
             <img className="rounded" src={user.avatar} alt={user.email} />
-            <p className="text-light">{user.first_name}</p>
-            <p className="text-light">{user.last_name}</p>
-            <p className="text-light">{user.email}</p>
+            <p className="text-light p-1">{user.first_name}</p>
+            <p className="text-light p-1">{user.last_name}</p>
+            <p className="text-light p-1">{user.email}</p>
           </div>
         ))}
     </div>

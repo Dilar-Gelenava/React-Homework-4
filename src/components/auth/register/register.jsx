@@ -2,6 +2,7 @@ import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
 // import { register } from '../../../services/';
+import RegisterCSS from '../Register.module.css';
 
 function Register() {
   const {
@@ -66,7 +67,7 @@ function Register() {
             </span>
           )}
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className={RegisterCSS.registerButton}>
           Register
         </button>
       </form>

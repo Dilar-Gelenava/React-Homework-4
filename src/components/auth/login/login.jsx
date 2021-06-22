@@ -1,7 +1,8 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router';
-import { login } from '../../../services/';
+import { login } from '../../../services';
+import LogInCSS from '../LogIn.module.css';
 
 function Login() {
   const {
@@ -18,7 +19,7 @@ function Login() {
       localStorage.setItem('auth.token', JSON.stringify(loggedIn.token));
       history.replace('/profile');
     } else {
-      alert('NOOO');
+      alert('Your credentials are incorrect!');
     }
   };
 
@@ -53,7 +54,7 @@ function Login() {
             </span>
           )}
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className={LogInCSS.logInButton}>
           Log In
         </button>
       </form>

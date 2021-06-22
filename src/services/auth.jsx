@@ -18,10 +18,12 @@ export const login = async (credentials) => {
 
 export const register = async (credentials) => {
   try {
-    console.warn('[register] is not implemented');
+    alert('registration is not ready yet');
   } catch (error) {}
 };
 
 export const logOut = async () => {
   localStorage.removeItem('auth.token');
+  alert('you are logged out');
+  //   return <Redirect to="/users"></Redirect>;
 };

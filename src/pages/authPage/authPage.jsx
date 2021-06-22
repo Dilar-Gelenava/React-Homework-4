@@ -1,9 +1,18 @@
-import Login from '../../components/auth/login';
+import Login from '../../components/auth/logIn';
 import Register from '../../components/auth/register';
 import { useState } from 'react';
+import { logOut } from '../../services';
+import { useEffect } from 'react';
 
 function AuthPage() {
   const [authPage, setAuthPage] = useState('login');
+
+  useEffect(() => {
+    let token = JSON.parse(localStorage.getItem('auth.token'));
+    if (token) {
+      setAuthPage('logout');
+    }
+  }, []);
 
   return (
     <div>
@@ -28,6 +37,16 @@ function AuthPage() {
         <div className="m-3 p-3 bg-dark rounded-3">
           {authPage === 'login' && <Login />}
           {authPage === 'register' && <Register />}
+          {authPage === 'logout' && (
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                logOut();
+                setAuthPage('login');
+              }}>
+              Log Out
+            </button>
+          )}
         </div>
       </div>
     </div>
