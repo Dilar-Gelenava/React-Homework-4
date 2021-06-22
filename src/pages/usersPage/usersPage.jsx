@@ -1,4 +1,5 @@
 import { loggedIn } from '../../HOC/loggedIn';
+import UserCard from '../../components/userCard/userCard';
 import { useState, useEffect } from 'react';
 
 function UsersPage() {
@@ -33,18 +34,7 @@ function UsersPage() {
 
   return (
     <div className="d-flex justify-content-around flex-wrap m-4">
-      {users &&
-        users.map((user) => (
-          <div
-            className="bg-dark rounded p-3 m-1"
-            style={{ width: '250px' }}
-            key={user.id}>
-            <img className="rounded" src={user.avatar} alt={user.email} />
-            <p className="text-light p-1">{user.first_name}</p>
-            <p className="text-light p-1">{user.last_name}</p>
-            <p className="text-light p-1">{user.email}</p>
-          </div>
-        ))}
+      {users && users.map((user) => <UserCard key={user.id} user={user} />)}
     </div>
   );
 }

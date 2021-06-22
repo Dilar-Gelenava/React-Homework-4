@@ -59,4 +59,4 @@ function ResourcesPage() {
     </div>
   );
 }
-export default ResourcesPage;
+export default loggedIn(ResourcesPage);

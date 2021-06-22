@@ -3,6 +3,7 @@ import Register from '../../components/auth/register';
 import { useState } from 'react';
 import { logOut } from '../../services';
 import { useEffect } from 'react';
+import classNames from 'classnames';
 
 function AuthPage() {
   const [authPage, setAuthPage] = useState('login');
@@ -18,14 +19,18 @@ function AuthPage() {
     <div>
       <div className="d-flex align-items-center justify-content-center">
         <button
-          className={`btn ${authPage === 'login' && 'btn-dark'} m-2`}
+          className={classNames('btn', 'm-2', {
+            'btn-dark': authPage === 'login',
+          })}
           onClick={() => {
             setAuthPage('login');
           }}>
           LOGIN
         </button>
         <button
-          className={`btn ${authPage === 'register' && 'btn-dark'} m-2`}
+          className={classNames('btn', 'm-2', {
+            'btn-dark': authPage === 'register',
+          })}
           onClick={() => {
             setAuthPage('register');
           }}>
