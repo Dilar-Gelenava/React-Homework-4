@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ErrorBoundary from './components/error-boundary';
-import MainPage from './pages/mainPage';
 import Navbar from './components/navbar';
+import MainPage from './pages/mainPage';
 import AuthPage from './pages/authPage';
 import UsersPage from './pages/usersPage';
 import ResourcesPage from './pages/resourcesPage';

@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
 This project is hosted on Netlify,
-Open []() to view it in the browser.
+Open [https://angry-saha-c27296.netlify.app/](https://angry-saha-c27296.netlify.app/) to view it in the browser.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

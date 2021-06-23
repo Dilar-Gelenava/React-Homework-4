@@ -45,7 +45,7 @@ function ResourcesPage() {
         </thead>
         {resources &&
           resources.map((resource) => (
-            <tbody>
+            <tbody key={resource.id}>
               <tr>
                 <th scope="row">{resource.id}</th>
                 <td>{resource.name}</td>

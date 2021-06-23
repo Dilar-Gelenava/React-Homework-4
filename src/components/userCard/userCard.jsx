@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import React, { memo } from 'react';
 
 function UserCard({ user }) {
   return (
@@ -15,4 +16,4 @@ UserCard.propTypes = {
   user: PropTypes.object,
 };
 
-export default UserCard;
+export default memo(UserCard);
