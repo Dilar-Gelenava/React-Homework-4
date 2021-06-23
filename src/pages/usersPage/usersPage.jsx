@@ -1,6 +1,7 @@
 import { loggedIn } from '../../HOC/loggedIn';
 import UserCard from '../../components/userCard/userCard';
 import { useState, useEffect } from 'react';
+import ThemeContext from '../../contexts/themeContext';
 
 function UsersPage() {
   const [users, setUsers] = useState(null);
@@ -33,9 +34,18 @@ function UsersPage() {
   }, []);
 
   return (
-    <div className="d-flex justify-content-around flex-wrap m-4">
-      {users && users.map((user) => <UserCard key={user.id} user={user} />)}
-    </div>
+    <ThemeContext.Consumer>
+      {([theme]) => {
+        return (
+          <div className="d-flex justify-content-around flex-wrap m-4">
+            {users &&
+              users.map((user) => (
+                <UserCard key={user.id} user={user} theme={theme} />
+              ))}
+          </div>
+        );
+      }}
+    </ThemeContext.Consumer>
   );
 }
 
